@@ -5,7 +5,6 @@ console.log(student);
 user = student;
 // Переменная 'user' перезапишется
 console.log(user);
-console.log("-------")
 
 let test = 1;
 test+=1;
@@ -20,7 +19,7 @@ console.log(test);
 test= Boolean(test);
 //true
 console.log(test);
-console.log("-------")
+
 
 
 let a = [2, 3, 5, 8];
@@ -29,7 +28,7 @@ for(let i=0;i<a.length;i++){
     mas1+=a[i];
 }
 console.log(mas1);
-console.log("-------")
+
 
 let b = [2, 5, 8, 15, 0, 6, 20, 3];
 for(let i=0;i<b.length;i++){
@@ -38,13 +37,14 @@ for(let i=0;i<b.length;i++){
     };
 }
 
-console.log("-------")
+
 for(let i=0;i<b.length;i++){
     if(b[i]%2===0 && b[i]!=0){
         console.log(b[i])
     };
 }
 */
+
 
 let item='asdfgfdsa';
 let a=item.length;
@@ -116,3 +116,4 @@ const zero = function (){
 }
 zero(random);
 console.log(random);
+
