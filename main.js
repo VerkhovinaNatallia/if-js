@@ -1,4 +1,4 @@
-let user = "John Doe";
+/*let user = "John Doe";
 console.log(user);
 let student = "Natallia";
 console.log(student);
@@ -44,5 +44,75 @@ for(let i=0;i<b.length;i++){
         console.log(b[i])
     };
 }
+*/
 
-   // Дан массив [2, 5, 8, 15, 0, 6, 20, 3]. С помощью цикла for и оператора if выведите в консоль четные элементы массива.
+let item='asdfgfdsa';
+let a=item.length;
+let mas =[];
+let q=0;
+function palindrome(){
+    for(i=0;i<a;i++){
+        if(item[i]==item[a-i-1]){
+            mas[i]=true;
+        }
+        else {
+            mas[i]=false;
+        }
+    }
+    for(n=0;n<mas.length;n++){
+        if(mas[n]==true){
+            q++
+        }
+
+
+    }
+    if(q==mas.length){
+        console.log(true)
+
+    }
+    else{
+        console.log(false)
+
+    }
+}
+palindrome(item);
+
+
+
+const min = function (a,b){
+    if(a>b){
+        return b
+    }
+    return a
+};
+const max = function (a,b){
+    if(a<b){
+        return b
+    }
+    return a
+};
+
+const minT = a > b ? b : a;
+return minT
+const maxT = a > b ? a : b;
+return maxT
+
+
+
+
+let random =[7,10,23,40,54,60,67,70,88,100];
+const zero = function (){
+    for(let i=0;i<random.length;i++){
+        if(random[i]%10===0 && random[i]<100){
+            random[i]=(random[i]/10)+'zero';
+        }
+        else if(random[i]===100){
+            random[i]='1zerozero';
+        }
+        else{
+            random[i]=random[i];
+        }
+    }
+}
+zero(random);
+console.log(random);
