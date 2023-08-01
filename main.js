@@ -46,74 +46,60 @@ for(let i=0;i<b.length;i++){
 */
 
 
-let item='asdfgfdsa';
-let a=item.length;
-let mas =[];
-let q=0;
-function palindrome(){
-    for(i=0;i<a;i++){
-        if(item[i]==item[a-i-1]){
-            mas[i]=true;
-        }
-        else {
-            mas[i]=false;
-        }
-    }
-    for(n=0;n<mas.length;n++){
-        if(mas[n]==true){
-            q++
-        }
 
-
-    }
-    if(q==mas.length){
-        console.log(true)
-
+function palindrome(string){
+    const backway = string.split("").reverse().join("");
+    if(backway==string){
+        return true;
     }
     else{
-        console.log(false)
-
+        return false;
     }
 }
-palindrome(item);
-
 
 
 const min = function (a,b){
     if(a>b){
         return b
     }
-    return a
+    else{
+        return a
+    }
 };
+
 const max = function (a,b){
     if(a<b){
         return b
     }
-    return a
+    else {
+        return a
+    }
 };
 
-const minT = a > b ? b : a;
-return minT
-const maxT = a > b ? a : b;
-return maxT
+const minT =(a,b)=> a > b ? b : a;
+
+const maxT =(a,b)=> a > b ? a : b;
+
 
 
 
 
 let random =[7,10,23,40,54,60,67,70,88,100];
+
 const zero = function (){
-    for(let i=0;i<random.length;i++){
-        if(random[i]%10===0 && random[i]<100){
+    for(let i=0; i<random.length; i++){
+        if(random[i]%10===0 && random[i]%100!==0){
             random[i]=(random[i]/10)+'zero';
         }
-        else if(random[i]===100){
-            random[i]='1zerozero';
+        else if(random[i]%100===0){
+            random[i]=(random[i]/100)+'zerozero';
         }
         else{
             random[i]=random[i];
         }
     }
 }
+
 zero(random);
 console.log(random);
 
