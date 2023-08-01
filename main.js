@@ -48,14 +48,10 @@ for(let i=0;i<b.length;i++){
 
 
 function palindrome(string){
-    const backway = string.split("").reverse().join("");
-    if(backway==string){
-        return true;
-    }
-    else{
-        return false;
-    }
+    string= string.toLowerCase();
+    return string===string.split("").reverse().join("")
 }
+
 
 
 const min = function (a,b){
