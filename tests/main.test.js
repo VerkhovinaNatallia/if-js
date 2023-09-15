@@ -13,7 +13,7 @@ function sum(a, b) {
   //const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 */
 
-import { colors } from "./scripts/modules.js"; 
+import { colors } from "../scripts/modules"; 
 
   describe('function tests', () => {
   test('colors.length', () => {
