@@ -1,10 +1,10 @@
 
-function sum1(a) {
+function sumArguments(a) {
     return function (b){
         return a + b;
     };
 }
 
-console.log(sum1(5)(2));
+console.log(sumArguments(5)(2));
 
 

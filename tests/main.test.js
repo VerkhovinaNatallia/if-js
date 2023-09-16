@@ -1,11 +1,11 @@
-function sum(a, b) {
+function sumVariable(a, b) {
     return a + b;
   
 }
 
  describe('function tests', () => {
     test('should return 3 for arguments 1 and 2', () => {
-      expect(sum(1, 2)).toBe(3);
+      expect(sumVariable(1, 2)).toBe(3);
     });
   });
 
