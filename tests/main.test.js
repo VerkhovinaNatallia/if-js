@@ -9,13 +9,10 @@ function sum(a, b) {
     });
   });
 
-/*
-  //const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
-*/
 
-import { colors } from "../scripts/modules"; 
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 
-  describe('function tests', () => {
+describe('function tests', () => {
   test('colors.length', () => {
     expect(colors.length).toBe(5);
   });
