@@ -1,7 +1,9 @@
-const date = '2020-11-26';
-const regular = new RegExp('([0-9]+)[-]([0-9]+)[-]([0-9]+)');
-const arr_data=date.match(regular);
-console.log(`${arr_data[3]}.${arr_data[2]}.${arr_data[1]}`);
+
+function flipDate(date){
+    const arr_data = date.split('-');
+    return (`${arr_data[2]}.${arr_data[1]}.${arr_data[0]}`);
+}
+
 
 
 
@@ -48,16 +50,15 @@ const data = [
         hotel: 'Hotel Rehberge Berlin Mitte',
     },
 ];
-const mas=[];
+
 
 function searchObjects( str){
+    const result=[];
     for (let i=0;i<data.length;i++){
         if(data[i].country==str || data[i].city==str || data[i].hotel==str ){
             const data_new  = data[i].country +','+data[i].city +','+data[i].hotel;
-            mas.push(data_new);
-
+            result.push(data_new);
         }
     }
-    console.log(mas);
+    return(result); 
 }
-
