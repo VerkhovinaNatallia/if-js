@@ -1,5 +1,8 @@
 
-const palindrome= (str)=>{return(str == str.split('').reverse().join(''))}
+const palindrome= (str)=>{
+  str=str.toLowerCase();
+  return(str == str.split('').reverse().join(''))
+}
 
 
 const hotels = [
@@ -162,6 +165,11 @@ const hotels = [
 
 
 function searchObjects (str){
+  str= str.split(" ").map(str => {
+    return str[0].toUpperCase() + str.slice(1);
+})
+  str = str.join(" ");
+  
     const bustingHotels = hotels.filter((item) => item.name === str || item.city === str || item.country === str);
     let result = bustingHotels.reduce((acc, item) => {
       acc += `${item.name}, ${item.city}, ${item.country}  `;
@@ -185,7 +193,7 @@ function countryCity(arr){
 
 
   function getCalendarMonth(daysInMonth, daysInWeek, dayOfWeek){
-    if (dayOfWeek > daysInWeek){ 
+    if (dayOfWeek > daysInWeek && daysInMonth<=30){ 
         return false;
     } 
 
