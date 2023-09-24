@@ -193,7 +193,7 @@ function countryCity(arr){
 
 
   function getCalendarMonth(daysInMonth, daysInWeek, dayOfWeek){
-    if (dayOfWeek > daysInWeek && daysInMonth<=30){ 
+    if (dayOfWeek > daysInWeek || daysInMonth>=30){ 
         return false;
     } 
 
@@ -220,5 +220,4 @@ function countryCity(arr){
   
     return(result);
   };
-
 
