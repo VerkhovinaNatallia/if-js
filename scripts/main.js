@@ -1,76 +1,40 @@
-const studentsData = [
-    {
-      firstName: 'Василий',
-      lastName: 'Петров',
-      admissionYear: 2019,
-      courseName: 'Java',
-    },
-    {
-      firstName: 'Иван',
-      lastName: 'Иванов',
-      admissionYear: 2018,
-      courseName: 'JavaScript',
-    },
-    {
-      firstName: 'Александр',
-      lastName: 'Федоров',
-      admissionYear: 2017,
-      courseName: 'Python',
-    },
-    {
-      firstName: 'Николай',
-      lastName: 'Петров',
-      admissionYear: 2019,
-      courseName: 'Android',
-    }
-  ];
 
-class User{
-    constructor(firstName, lastName){
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+const text1 = document.getElementById("text1");
+const text2 = document.getElementById("text2");
+const text3 = document.getElementById("text3");
 
-    get fullName(){
-        return `${this.firstName} ${this.lastName}`;
+const colors = {
+  data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
+  current: 0,
+  [Symbol.iterator]() {
+    return this;
+  },
+  next() {
+    if (this.current < this.data.length) {
+      return {
+        done: false,
+        value: this.data[this.current++],
+      };
     }
+    if (this.current <= this.data.length) {
+      this.current = 0;
+      return {
+        done: false,
+        value: this.data[this.current],
+      };
+    }
+  },
+};
+
+function сhangesСolor(colors) {
+  return function (event) {
+    event.target.style.color = colors.next().value;
+
+    return event;
+  };
 }
 
-class Student extends User{
-    constructor(admissionYearr, courseName, ...prop){
-        super(...prop);
-        this.admissionYearr = admissionYearr;
-        this.courseName = courseName;
-    }
+text1.addEventListener("click", сhangesСolor({ ...colors }));
+text2.addEventListener("click", сhangesСolor({ ...colors }));
+text3.addEventListener("click", сhangesСolor({ ...colors }));
 
-    get course(){
-        return 2023 - this.admissionYearr;
-    }
-    
-}
-
-class Students{
-    constructor(student){
-        this.student = student;
-    }
-    getInfo(){
-        const arr = [];
-        this.student.sort((a, b) =>{
-            if (a.name > b.name) {
-              return 1;
-            }
-            if (a.name < b.name) {
-              return -1;
-            }
-            return 0;
-          });
-        this.student.map((item,index)=>{
-            const course = 2023 - item.admissionYear;
-        arr[index] = `${item.firstName} ${item.lastName} - ${item.courseName}, ${course} курс`;
-        });
-        return arr;
-    };
-        
-}
-const students = new Students(studentsData);
-console.log(students.getInfo());
