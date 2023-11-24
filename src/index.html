@@ -118,17 +118,47 @@
               <p class="form__sm-none">&mdash;</p>
               <label class="people-grid2" for="date"> Sat 19 Sept </label>
             </div>
-            <div class="input form__inpyt-grid2">
-              <input id="people" class="form__people" />
-              <label for="people" class="people-grid3">2 </label>
-              <label for="people" class="people-grid4">Adults</label>
-              <p class="form__sm-none">&mdash;</p>
-              <label for="people" class="people-grid5">0</label>
-              <label for="people" class="people-grid6">Children</label>
-              <p class="form__sm-none">&mdash;</p>
-              <label for="people" class="people-grid7">1</label>
-              <label for="people" class="people-grid8">Room</label>
+
+
+
+            <div class=" filter">
+              <div class="input rooms12 filter__form">
+                <button class="form__people1" type="button"><span class="roomsSpan filter__formSpan">1</span> Adults-<span class="roomsSpan filter__formSpan">0</span> Children-<span class="roomsSpan filter__formSpan">1</span> Room</button> 
+              </div>
+              <div class="people__info block" id="people__info">
+                <div class="count__people__items">
+                  <div class="count__people__item">
+                    <p>Adults</p>
+                    <div class="counter" >
+                      <div class="conter_button conter__betton_minus disabled">-</div>
+                      <div class="conter_input "> <input tupe='text' disabled  value="1"></div>
+                      <div class="conter_button conter__betton_plus">+</div>
+                    </div>
+                  </div>
+                  <div class="count__people__item">
+                    <p>Children</p>
+                    <div class="counter" >
+                      <div class="conter_button conter__betton_minus disabled">-</div>
+                      <div class="conter_input "> <input tupe='text' disabled class="conter__child" value="0"></div>
+                      <div class="conter_button conter__betton_plus">+</div>
+                    </div>
+                  </div>
+                  <div class="count__people__item">
+                    <p>Rooms</p>
+                    <div class="counter" >
+                      <div class="conter_button conter__betton_minus disabled">-</div>
+                      <div class="conter_input "> <input tupe='text'disabled value="1"></div>
+                      <div class="conter_button conter__betton_plus">+</div>
+                    </div>
+                  </div>
+                  <div class="disabledChild  childAge">
+                    <p>What is the age of the child you’re travelling with?</p>
+                  </div>
+
+                </div>    
+              </div>
             </div>
+
             <button class="form__button form__button-grid">Search</button>
           </form>
         </div>
@@ -437,6 +467,7 @@
       </div>
       <p class="footer__block--p">2022Triphouse, Inc. All rights reserved</p>
     </footer>
+    <script src="./js/filter.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

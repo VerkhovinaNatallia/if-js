@@ -107,6 +107,7 @@ input {
   min-height: 100vh;
   flex-direction: column;
 }
+
 .form__label {
   display: flex;
 
@@ -119,6 +120,7 @@ input {
   border-radius: 8px;
   height: 64px;
   width: 100%;
+  position: relative;
 }
 .form__title {
   font-size: 18px;
@@ -135,13 +137,113 @@ input {
   color: #383838;
   padding: 22px 0 21px 24px;
 }
-.form__people {
-  width: 259px;
-  border-radius: 8px;
-  border: none;
-  color: #383838;
-  padding: 22px 0 21px 24px;
+
+
+
+.filter{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 12px;
+  width: 25%;
 }
+.filter__form{
+  padding: 21px;
+    width: 100%;
+    justify-content: center;
+}
+
+.counter{
+  display:flex;
+  align-items: center;
+  gap: 13px;
+  user-select: none;
+ 
+}
+.conter_button{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #3077C6;
+  color: #3077C6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+} 
+
+.conter_input{
+  width: 22px;
+  text-align: center;
+}
+.conter_input input{
+  background-color: #fff;
+  border: none;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+}
+
+.disabled{
+  border: 1px solid #c4c4c4;
+  color: #c4c4c4;
+}
+.disabledChild{
+  
+  display: none;
+  
+}
+.childAge select{
+  display: block;
+  margin-top:12px;
+}
+
+/*----------*/
+.people__info{
+  width: 80%;
+}
+.count__people__items{
+  top:13px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color:#fff ;
+  border-radius: 8px;
+  background: #FFF;
+  padding: 22px;
+  gap:12px;
+
+  
+  
+  
+}
+.count__people__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.people__info{
+display:block;
+}
+  
+
+.count__people__block{
+  display: flex;
+  gap :19px;
+}
+.child__age{
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+}
+
+
+
 .form__button {
   width: 15%;
   background: #3077c6;
@@ -154,6 +256,7 @@ input {
 }
 .input:hover {
   border: 3px solid #f5bd41;
+  border-radius: 8px;
 }
 .form__city:hover {
   border: none;
@@ -164,21 +267,27 @@ input {
 .form__people {
   display: none;
 }
+#people__info {
+  display: none;
+}
 .input {
   display: flex;
   color: #383838;
-
-  border-radius: 8px;
-  width: 20%;
   align-items: center;
   font-size: 18px;
   line-height: 21px;
+  height: 100%;
 }
+
 .form__inpyt-grid1 {
   border: none;
   width: 25%;
   color: #383838;
 }
+
+
+
+
 .top-section__downloads {
   display: flex;
   justify-content: center;
@@ -1264,3 +1373,4 @@ input {
 .navigation__akaunt:hover {
   fill: #f5bd41;
 }
+
